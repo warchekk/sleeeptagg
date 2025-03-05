@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с кнопкой</title>
+    <style>
+        #button {
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        #button:hover {
+            transform: scale(1.1);
+        }
+        #stopButton {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        #stopButton:hover {
+            transform: scale(1.1);
+            background-color: darkred;
+        }
+        h1 {
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        h1:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        @media (max-width: 600px) {
+            #button {
+                width: 80%;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            #stopButton {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://t.me/sleeeptag" target="_blank">
+        <h1>sleeeptag</h1>
+    </a>
+    <img src="image/ef30bbce-32ea-4935-be53-e0e8c6535b6b.jpg" id="button" style="cursor:pointer;" alt="Кнопка" />
+    <audio id="sound" src="sound/wait-wait-wait-what-the-hell-legend-sound.mp3"></audio>
+    <button id="stopButton">ВЫКЛЮЧИТЬ</button>
+    
+    <script>
+        document.getElementById('button').onclick = function() {
+            document.getElementById('sound').play();
+        }
+        
+        document.getElementById('stopButton').onclick = function() {
+            // В данной функции ничего не происходит
+        }
+    </script>
+</body>
+</html>
